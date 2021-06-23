@@ -18,7 +18,8 @@
         </div>
         
         <p><span class="btn-round" style="margin-top: 35%;">or</span></p>
-        <div><form>
+        <div>
+            <form action="#">
             <h1>Sign Up</h1>
 
             <fieldset>
@@ -31,7 +32,8 @@
                 <p><asp:Label ID="SignUpMessage" ForeColor="green" runat="server" Text=""></asp:Label></p>
                 <p><asp:Button value="Sign Up" ID="SignUpButton"  runat="server" OnClick="SignUpButton_OnClick" Text="Sign Up" /></p>
             </fieldset>
-        </form></div>
+        </form>
+        </div>
         
     </div> <!-- end login -->
 </asp:Content>

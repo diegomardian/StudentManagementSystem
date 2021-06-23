@@ -16,6 +16,7 @@ namespace StudentManagementSystem
         private string _connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=StudentManagementSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         protected void Page_Load(object sender, EventArgs e)
         {
+            GreetingLabel.Text = "Welcome " + Session["username"];
             if (!IsPostBack)
             {
                 GrivViewBind();

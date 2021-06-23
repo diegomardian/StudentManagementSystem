@@ -32,6 +32,8 @@ namespace StudentManagementSystem
                     if (sdr.Read())
                     {
                         LoginErrorLabel.Text = "";
+                        Session["username"] = user;
+                        Response.Redirect("Default.aspx");
                     }
                     else
                     {
@@ -56,14 +58,16 @@ namespace StudentManagementSystem
                 String username = SignUpUsername.Text;
                 String type = TypeDropDown.SelectedValue;
                 
-                SqlCommand cmd = new SqlCommand("INSERT INTO users (Id, Username, Password, Type) VALUES ('" + username + "','" + password +
+                SqlCommand cmd = new SqlCommand("INSERT INTO users (Username, Password, Type) VALUES ('" + username + "','" + password +
                                                 "','" + type + "')", conn);
                 cmd.ExecuteNonQuery();
 
 
                 SignUpMessage.Text = "Registration Done. Please login.";
                 Username.Focus();
+
             }
         }
+        
     }
 }
