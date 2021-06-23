@@ -14,7 +14,38 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        html,
+        body {
+            margin:0;
+            padding:0;
+            height:100%;
+        }
+        #container {
+            min-height:100%;
+            position:relative;
+            
+        }
 
+        #header {
+            margin-bottom: 87px;
+        }
+        
+        #body {
+            padding:10px;
+            padding-bottom:60px;   /* Height of the footer */
+        }
+        #footer {
+            position:absolute;
+            bottom:0;
+            height:60px;
+            margin-bottom: 20px;
+            /* Height of the footer */
+        }
+        #container {
+            height:100%;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -38,20 +69,27 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" runat="server" href="~/">Student Management System</a>
-                </div>
-            </div>
-        </div>
+        
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Student Management System</p>
-            </footer>
+                <div id="header">
+                    <div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" runat="server" href="~/">Student Management System</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="body">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div id="footer"><hr />
+                    <footer class="footer">
+                        <p>&copy; <%: DateTime.Now.Year %> - Student Management System</p>
+                    </footer></div>
+
+            
+            
         </div>
 
     </form>
