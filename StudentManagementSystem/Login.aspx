@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="Content/login.css"/>
     <div id="loginDiv" style="display: inline-flex;width: 100%;justify-content: center;">
         <div>
-            <form>
+            <div>
                 <h1>Login</h1>
 
                 <fieldset>
@@ -14,12 +14,12 @@
                     <p><asp:Label ID="LoginErrorLabel" runat="server" Text="" ForeColor="red"></asp:Label></p>
                     <p><asp:Button value="Login" ID="LoginButton" runat="server" Text="Login" OnClick="Login_OnClick"/></p>
                     </fieldset>
-            </form>
+            </div>
         </div>
         
         <p><span class="btn-round" style="margin-top: 35%;">or</span></p>
         <div>
-            <form action="#">
+            <div action="#">
             <h1>Sign Up</h1>
 
             <fieldset>
@@ -30,9 +30,9 @@
                     <asp:ListItem Text="Admin" Value="1"></asp:ListItem>
                 </asp:DropDownList></p>
                 <p><asp:Label ID="SignUpMessage" ForeColor="green" runat="server" Text=""></asp:Label></p>
-                <p><asp:Button value="Sign Up" ID="SignUpButton"  runat="server" OnClick="SignUpButton_OnClick" Text="Sign Up" /></p>
+                <p><asp:Button  value="Sign Up" ID="SignUpButton"  runat="server" OnClick="SignUpButton_OnClick" Text="Sign Up" /></p>
             </fieldset>
-        </form>
+        </div>
         </div>
         
     </div> <!-- end login -->

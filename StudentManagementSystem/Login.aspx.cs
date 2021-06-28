@@ -14,7 +14,12 @@ namespace StudentManagementSystem
         private string _connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=StudentManagementSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+            }
+
+            SignUpButton.Click += SignUpButton_OnClick;
         }
 
         protected void Login_OnClick(object sender, EventArgs e)
@@ -54,6 +59,7 @@ namespace StudentManagementSystem
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
+                conn.Open();
                 String password = SignUpPassword.Text;
                 String username = SignUpUsername.Text;
                 String type = TypeDropDown.SelectedValue;
