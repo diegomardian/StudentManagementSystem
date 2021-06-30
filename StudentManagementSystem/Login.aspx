@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
     <link rel="stylesheet" href="Content/login.css"/>
+    <script src="Scripts/login.js"></script>
     <div id="loginDiv" style="display: inline-flex;width: 100%;justify-content: center;">
         <div>
                 <h1>Login</h1>
@@ -27,7 +28,7 @@
                     <asp:ListItem Text="Admin" Value="1"></asp:ListItem>
                 </asp:DropDownList></p>
                 <p><asp:Label ID="SignUpMessage" ForeColor="green" runat="server" Text=""></asp:Label></p>
-                <p><asp:Button  value="Sign Up" ID="SignUpButton"  runat="server" OnClick="SignUpButton_OnClick" Text="Sign Up" /></p>
+                <p><asp:Button value="Sign Up" ID="SignUpButton"  runat="server" OnClick="SignUpButton_OnClick" Text="Sign Up" /></p>
             </fieldset>
         </div>
         

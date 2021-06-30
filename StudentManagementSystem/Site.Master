@@ -6,6 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Scripts/jquery-3.4.1.slim.min.js"></script>
     <title>Student Management System</title>
 
     <asp:PlaceHolder runat="server">
@@ -29,6 +30,8 @@
 
         #header {
             margin-bottom: 87px;
+            font-size: 20px;
+
         }
         
         #body {
@@ -40,6 +43,7 @@
             bottom:0;
             height:60px;
             margin-bottom: 20px;
+            font-size: 20px;
             /* Height of the footer */
         }
         #container {
